@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import DisplayItems from './components/DisplayItems';
+import AddNewItems from './components/AddNewItem';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return <div class="container" style={{"marginTop":"20px"}}>
+    <AddNewItems id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"/>
+    <div class="row" style={{"marginTop":"40px"}}>
+      <div class="col-12">
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{"backgroundColor":"#212529","color":"white","float":"right","marginRight":"20px"}}>add</button>
+      </div>
+      <div class="col-12">
+      <DisplayItems/>
+      </div>
+      
     </div>
-  );
+  </div>
 }
 
 export default App;
